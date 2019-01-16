@@ -18,7 +18,7 @@ var arr = [10,20,30];
 */
 
 //Code Here
-
+var first = (arr) => {return arr[0]};
 
 
 ////////// PROBLEM 2 //////////
@@ -33,7 +33,9 @@ var arr = [40,50,60];
 */
 
 //Code Here
-
+var last = (arr) => {
+  return arr[arr.length-1];
+};
 
 
 ////////// PROBLEM 3 //////////
@@ -48,7 +50,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
-
+function looper (family) {
+  for (i=0;i<family.length;i++) {
+    alert(family[i]);
+  }
+};
 
 
 ////////// PROBLEM 4 //////////
@@ -63,7 +69,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-
+var reversedLooper = (letters) => {
+  for (let i=letters.length-1; i >=0; i--) {
+    alert(letters[i]);
+  }
+};
 
 
 ////////// PROBLEM 5 //////////
@@ -78,7 +88,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
-
+var evenFinder = (nums) => {
+  var evenNums = [];
+  for (i=0;i<nums.length;i++) {
+    if (nums[i] % 2 === 0) {
+      evenNums.push(nums[i]);
+    }
+  }
+  return evenNums;
+};
 
 
 
@@ -106,7 +124,21 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-
+var divider = (numbersArray) => {
+  var evensOnly = [];
+  var oddsOnly = [];
+  for (i=0;i<numbersArray.length;i++) {
+    if (numbersArray[i] % 2 === 0) {
+      evensOnly.push(numbersArray[i]);
+    } else {
+      oddsOnly.push(numbersArray[i])
+    }
+  };
+  var bigArray = [];
+  bigArray[0] = evensOnly;
+  bigArray[1] = oddsOnly;
+  return bigArray;
+};
 
 
 ////////// PROBLEM 7 //////////
@@ -121,13 +153,15 @@ var getRandomArbitrary = function() {
   var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
   Above you're given a function that will return a random number between 0 and 30. There is also a commented out array full of numbers to help you visualize what your function will be receiving.
   Write a function named finder that will take in an array as an argument.
-  It will then  get a random number (by invoking getRandomArbitrary).
+  It will then get a random number (by invoking getRandomArbitrary).
   Loop through the array to see if that random number is in the array. 
   If it is, return true, if it's not, return false
 */
 
 //Code Here
-
+var finder = (arr) => {
+  return arr.includes(getRandomArbitrary());
+};
 
 
 ////////// PROBLEM 8 //////////
@@ -139,14 +173,11 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 /*
   Here we're going to write a function that mimics going shopping and checking things off of our grocery list and adding new items to our list.
 
-  Write a function called removeItem that is given two arguments, the first is myGroceryList, and the second is an item to remove from myGroceryList. 
-  If the second argument (or the item to add or remove) matches an item in myGroceryList, remove that item from the your grocery list and return the new, updated grocery list.
+  Write a function called removeItem that is given two arguments, the first is myGroceryList, and the second is an item to remove from myGroceryList. If the second argument (or the item to add or remove) matches an item in myGroceryList, remove that item from the your grocery list and return the new, updated grocery list.
 
-  Once you do that, write another function called addItem that is given two arguments, the first is myGroceryList and the second is an item to add to your grocery list. 
-  In addItem add the item you passed in to myGroceryList then return the new, updated grocery list.
+  Once you do that, write another function called addItem that is given two arguments, the first is myGroceryList and the second is an item to add to your grocery list. In addItem add the item you passed in to myGroceryList then return the new, updated grocery list.
 
-  In both removeItem and addItem check to see if the 'myGroceryList' and 'item' arguments are truthy.
-  If they are not, return an empty array.
+  In both removeItem and addItem check to see if the 'myGroceryList' and 'item' arguments are truthy. If they are not, return an empty array.
 
   Here are some examples of calling your functions and what should be returned:
   removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
@@ -156,8 +187,23 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+// var removeItem = (myGroceryList, item) => {
+//   if (myGroceryList=val && item=val) {
+//     if (myGroceryList[i]===item) {
+//       myGroceryList.splice(i, 1);
+//       return myGroceryList;
+//     } 
+//   } else {
+//     return [];
+//   }
+// };
 
-
+// var addItem = (myGroceryList, item) => {
+//   if (myGroceryList[i]===item) {
+//   myGroceryList.push(i)
+//   }
+//   return myGroceryList;
+// };
 
 ////////// PROBLEM 9 //////////
 
@@ -166,7 +212,7 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
-
+var maker = () => {};
 
 
 ////////// PROBLEM 10 //////////
@@ -182,7 +228,9 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
-
+function addTen (numbers) {
+  return newArray = numbers.push([i]+10)
+};
 
 
 ////////// PROBLEM 11 //////////
